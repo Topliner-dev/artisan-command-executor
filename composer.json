@@ -24,5 +24,12 @@
     "psr-4": {
       "Topliner\\ArtisanCommandExecutor\\Test\\": "tests/"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Topliner\\ArtisanCommandExecutor\\Providers\\ArtisanExecuteCommandServiceProvider"
+      ]
+    }
   }
 }
