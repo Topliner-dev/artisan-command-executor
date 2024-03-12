@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Topliner\ArtisanCommandExecutor\Providers;
 
-class ArtisanExecuteCommandServiceProvider
+use Illuminate\Support\ServiceProvider;
+
+class ArtisanExecuteCommandServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
