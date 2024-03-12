@@ -4,4 +4,4 @@ use Topliner\ArtisanCommandExecutor\Http\Controllers\ArtisanExecuteCommandContro
 use Illuminate\Support\Facades\Route;
 
 
-Route::post('tools/execute-command', [ArtisanExecuteCommandController::class, 'executeCommand']);
+Route::post('api/tools/execute-command', [ArtisanExecuteCommandController::class, 'executeCommand']);
