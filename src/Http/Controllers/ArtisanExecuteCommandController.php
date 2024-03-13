@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Topliner\ArtisanCommandExecutor\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Exception;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Topliner\ArtisanCommandExecutor\Http\Requests\ArtisanExecuteCommandRequest;
 use Topliner\ArtisanCommandExecutor\Services\ArtisanExecuteCommandService;
 
-class ArtisanExecuteCommandController
+class ArtisanExecuteCommandController extends Controller
 {
     private ArtisanExecuteCommandService $artisanExecuteCommandService;
 
