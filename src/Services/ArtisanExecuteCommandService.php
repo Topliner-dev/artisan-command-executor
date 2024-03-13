@@ -10,25 +10,7 @@ use InvalidArgumentException;
 
 class ArtisanExecuteCommandService
 {
-    const COMMAND_FILTER = [
-            'db',
-            'env',
-            'event',
-            'ide-helper',
-            'horizon',
-            'jwt',
-            'key',
-            'l5-swagger',
-            'lang',
-            'make',
-            'migrate',
-            'model',
-            'notifications',
-            'queue',
-            'storage',
-            'stub',
-            'vendor',
-        ];
+    const COMMAND_FILTER_DEFAULT = 'db,env,event,ide-helper,horizon,jwt,key,l5-swagger,lang,make,migrate,model,notifications,queue,storage,stub,vendor';
 
     /**
      * @throws Exception
@@ -97,7 +79,7 @@ class ArtisanExecuteCommandService
             if (preg_match($pattern, $value, $matches)) {
                 if (in_array(
                     $matches[2],
-                    config('artisan-command-executor.command_filter', self::COMMAND_FILTER)
+                    explode(',', config('artisan-command-executor.command_filter', self::COMMAND_FILTER_DEFAULT))
                 )) {
                     unset($commandList[$key]);
                 }
