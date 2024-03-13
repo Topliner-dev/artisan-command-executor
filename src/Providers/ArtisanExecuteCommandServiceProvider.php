@@ -14,8 +14,8 @@ class ArtisanExecuteCommandServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/../../config/artisan-command-executor.php' => config_path('artisan-command-executor.php'),
             ]);
-
-            $this->loadRoutesFrom(__DIR__ . '/../../routes/tools.php');
         }
+
+        $this->loadRoutesFrom(__DIR__ . '/../../routes/tools.php');
     }
 }
