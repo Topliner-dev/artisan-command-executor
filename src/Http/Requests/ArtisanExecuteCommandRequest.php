@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Topliner\ArtisanCommandExecutor\Http\Requests;
 
-use InfyOm\Generator\Request\APIRequest;
+use Illuminate\Foundation\Http\FormRequest;
 
-class ArtisanExecuteCommandRequest extends APIRequest
+class ArtisanExecuteCommandRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
