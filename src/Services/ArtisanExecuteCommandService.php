@@ -17,6 +17,9 @@ class ArtisanExecuteCommandService
      */
     public function executeCommand(array $validated): array
     {
+        // убираем ограничение на время работы скрипта
+        ini_set('max_execution_time', 0);
+
         $pattern = '/^(\S+)(.*)/';
 
         if (preg_match($pattern, $validated['input'], $matches)) {
